@@ -1,14 +1,16 @@
 clc; clear all;
-message = "Bennett doesn't listen";
+message = "Bennett t";
 message = letters(message)
 length(message)
 
-
+pauseTime = .6;
 f = 500;
 fs = 44100;
 n = 0:17000-1;
 x1 = sin(2 * f* n / fs);
 x2 = sin(4*f*n/fs);
+spacec = sin(6*f*n/fs);
+spacew = sin(8*f*n/fs);
 
 
 
@@ -17,18 +19,21 @@ for k=1:length(message)
     switch(message(k))
         case "-"
             sound(x1, fs);
-            pause(0.75);
+            pause(pauseTime);
 
         case "."
             sound(x2,fs);
-            pause(0.75);
+            pause(pauseTime);
         otherwise
-            
-            fprintf("no")
-            pause(0.75);
-            if k < length(message) && message(k+1) == " "
-                pause(2);
+            if (k < length(message) && message(k+1) == " ")
+                sound(spacew, fs);
+                pause(pauseTime);
                 k=k+1
+                fprintf("  ");
+            else
+                fprintf(" ");
+                sound(spacec,fs);
+                pause(pauseTime);
             end
     end
     
