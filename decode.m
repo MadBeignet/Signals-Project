@@ -1,4 +1,4 @@
-function decodedMessage = decode(wordArray)
+function decodedMessage = decode(word)
 lets = [
     "E",".";
     "T","-";
@@ -41,7 +41,7 @@ lets = [
     "'","-----.";
     ];
     decodedMessage = "";
-        letters = split(wordArray(k));
+        letters = split(word);
         
         for l = 1:length(letters)
             if length(lets(lets(:,2) == letters(l))) ~= 0
