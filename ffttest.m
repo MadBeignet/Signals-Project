@@ -1,4 +1,3 @@
-
 previous = 0;
 endTimer = 0;
 recorder = audiorecorder(44100,16,2);
@@ -47,4 +46,6 @@ while endTimer<40
     
     
 end
+
+decode(wordArray)
 
