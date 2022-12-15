@@ -30,7 +30,12 @@ while endTimer<40
     elseif(indexMax>120&indexMax<140 &newD)
         clc;
         %'NEWWORD'
-        decodedMessage = decodedMessage + " " + decode(currWord)
+        decodedWord = decode(currWord);
+        if extract(decodedWord,1) == "-"
+            decodedMessage = decodedMessage + " " + extractAfter(decodedWord,1)
+        else
+            decodedMessage = decodedMessage + " " + decodedWord
+        end
         currWord = "";
         
         newD=false;

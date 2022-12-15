@@ -15,17 +15,17 @@ while endTimer<40
     if (indexMax <67 & indexMax>63  & newD)
         %clc;
        % 'DOT'
-        currWord=currWord + ".";
+        currWord=currWord + "."
         newD=false;
     elseif(indexMax <36 & indexMax> 30 & newD)
         %clc;
        % 'DASH'
-        currWord=currWord + "-";
+        currWord=currWord + "-"
         newD=false;
     elseif(indexMax<98&indexMax>94 &newD)
         %clc;
        % 'NEWCHAR'
-        currWord=currWord + " ";
+        currWord=currWord + " "
         newD=false;
     elseif(indexMax>120&indexMax<140 &newD)
         clc;

@@ -45,7 +45,7 @@ lets = [
         letters = split(word);
         
         for l = 1:length(letters)
-            if ISEMPTY(lets(lets(:,2) == letters(l)))
+            if length(lets(lets(:,2) == letters(l))) ~= 0
                 decodedMessage = decodedMessage + lets(find(lets(:,2) ...
                     == letters(l)),1);
             else
