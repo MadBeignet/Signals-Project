@@ -1,5 +1,5 @@
 clc; clear all;
-message = "";
+message = "The British are coming";
 message = letters(message)
 length(message)
 
