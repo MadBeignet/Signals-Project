@@ -1,5 +1,5 @@
 clc; clear all;
-message = "Carly Beilis said 'do we want to order dinner'";
+message = "";
 message = letters(message)
 length(message)
 
