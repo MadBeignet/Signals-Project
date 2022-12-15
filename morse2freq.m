@@ -1,9 +1,9 @@
 clc; clear all;
-message = "Bennett t";
+message = "Carly Beilis said 'do we want to order dinner'";
 message = letters(message)
 length(message)
 
-pauseTime = .6;
+pauseTime = .8;
 f = 500;
 fs = 44100;
 n = 0:17000-1;
