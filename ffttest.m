@@ -4,8 +4,6 @@ recorder = audiorecorder(44100,16,1);
 currWord="";
 newD=true;
 
-wordArray =[]
-
 while endTimer<40
     
     recordblocking(recorder,.2);
@@ -32,7 +30,7 @@ while endTimer<40
     elseif(indexMax>120&indexMax<140 &newD)
         clc;
         %'NEWWORD'
-        wordArray =[wordArray currWord]
+        decode(currWord)
         currWord = "";
         newD=false;
     else
@@ -47,5 +45,4 @@ while endTimer<40
     
 end
 
-decode(wordArray)
 
