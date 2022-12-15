@@ -17,8 +17,6 @@ spacew = sin(8*f*n/fs);
 % refresh the word
 sound(spacew,fs);
 pause(pauseTime);
-sound(spacew,fs);
-pause(pauseTime);
 
 for k=1:length(message)
     message(k);
