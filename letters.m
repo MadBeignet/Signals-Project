@@ -53,5 +53,5 @@ lets = [
             morse = morse + " ";
         end
     end
-    morse = char(morse);
+    morse = char(extractAfter(morse,1));
 end
