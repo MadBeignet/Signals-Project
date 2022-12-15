@@ -50,7 +50,6 @@ lets = [
                 decodedMessage = decodedMessage + "-";
             end
         end
-        decodedMessage = decodedMessage + " ";
 end
 
         
