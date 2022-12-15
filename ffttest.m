@@ -3,7 +3,7 @@ endTimer = 0;
 recorder = audiorecorder(44100,16,1);
 currWord="";
 newD=true;
-
+decodedMessage = "";
 while endTimer<40
     
     recordblocking(recorder,.2);
@@ -30,8 +30,9 @@ while endTimer<40
     elseif(indexMax>120&indexMax<140 &newD)
         clc;
         %'NEWWORD'
-        decode(currWord)
+        decodedMessage = decodedMessage + " " + extractAfter(decode(currWord),1)
         currWord = "";
+        
         newD=false;
     else
         newD=true;
